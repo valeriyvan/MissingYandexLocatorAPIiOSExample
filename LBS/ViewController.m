@@ -184,6 +184,8 @@
             NSString *latitude = [position objectForKey:@"latitude"];
             NSString *longitude = [position objectForKey:@"longitude"];
             NSString *precision = [position objectForKey:@"precision"];
+            NSString *type = [position objectForKey:@"type"];
+            
 //            if (latitude==nil || ![latitude isKindOfClass:[NSString class]] ||
 //                longitude==nil || ![longitude isKindOfClass:[NSString class]] ||
 //                precision==nil || ![precision isKindOfClass:[NSString class]])
@@ -196,9 +198,15 @@
             CLLocationCoordinate2D c = CLLocationCoordinate2DMake([latitude floatValue], [longitude floatValue]);
             double precisionInMeters = [precision doubleValue];
             self.mapView.region = MKCoordinateRegionMakeWithDistance(c, precisionInMeters*3, precisionInMeters*3);
-
             [self.mapView addAnnotation:[RadiusMKAnnotation simpleAnnotationWithCoordinate:c title:nil subtitle:nil radius:precisionInMeters]];
 
+            NSString *detectedBy = @"<не известно>";
+            if ([type isEqualToString:@"gsm"])
+                detectedBy = @"LBS данным";
+            else if ([type isEqualToString:@"ip"])
+                detectedBy = @"IP-адресу";
+            self.accuracy.text = [NSString stringWithFormat:@"Точность %.1fм. Координаты определены по %@.", precisionInMeters, detectedBy];
+            
             NSLog(@"Ответ Yandex.locator: %@\n", [JSON description]);
             //[self alertWithTitle:@"Ответ Yandex.locator" message:[JSON description]];
 

@@ -279,10 +279,23 @@
                                     <action selector="clear:" destination="2" eventType="touchUpInside" id="H2J-QK-UTy"/>
                                 </connections>
                             </button>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" id="7Dy-K0-q0M">
+                                <rect key="frame" x="-10" y="527" width="330" height="26"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UdD-TZ-Ml0">
+                                <rect key="frame" x="0.0" y="527" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="accuracy" destination="UdD-TZ-Ml0" id="cZF-aE-ayF"/>
                         <outlet property="cid1" destination="JZG-hz-4Y4" id="Ucn-Pp-2iU"/>
                         <outlet property="cid2" destination="Whe-97-1Cd" id="Udg-x3-GeQ"/>
                         <outlet property="cid3" destination="uHZ-t0-CtB" id="R02-lN-pZv"/>
@@ -308,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-93" y="-6"/>
+            <point key="canvasLocation" x="-74" y="-26"/>
         </scene>
     </scenes>
     <resources>
@@ -321,6 +334,7 @@
                 <relationship kind="action" name="clear:"/>
                 <relationship kind="action" name="hideKeyboard"/>
                 <relationship kind="action" name="show:"/>
+                <relationship kind="outlet" name="accuracy" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="cid1" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="cid2" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="cid3" candidateClass="UITextField"/>

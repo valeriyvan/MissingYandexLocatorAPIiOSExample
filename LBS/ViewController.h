@@ -32,6 +32,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *strength3;
 @property (nonatomic, weak) IBOutlet UITextField *strength4;
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@property (nonatomic, weak) IBOutlet UILabel *accuracy;
 
 -(IBAction)hideKeyboard;
 -(IBAction)show:(id)sender;
