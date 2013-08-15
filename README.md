@@ -6,4 +6,6 @@
 
 Yandex.Locator [Documentation](http://api.yandex.ru/locator/doc/dg/samples/mobapp.xml "Documentation") gives example applications for Andriod, Symbian and J2ME> But misses example for iOS. That could be explained, probably, by fact that iOS application has no access to data by which Yandex.Locator determines coordinates. But if you have data from other device, e.g. tracker, and you want determine coordinates and show place on map? Here it is missing example iOS application using Yandex.Locator. 
 
+Licensed under MIT license.
+
 ![screenshot](http://w7software.com/images/ScreenShotMissingYandexLocatorAPIiOSExample.png)
